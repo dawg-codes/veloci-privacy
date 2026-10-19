@@ -16,7 +16,7 @@
 </head>
 <body>
 <h1>Veloci Privacy Policy</h1>
-<p><em>Effective: 2 October 2026</em> · Applies to the Veloci Android app (<code>app.veloci</code>), version 1.0.0 and later.</p>
+<p><em>Effective: 19 October 2026</em> · Applies to the Veloci Android app (<code>app.veloci</code>), version 1.0.0 and later.</p>
 <p>Veloci is a driving, GPS and connectivity companion (speedometer, trip computer, activity tracker,
 GNSS monitor and internet speed test) made by dawg-codes. It has no account, no ads, no analytics
 and no crash reporting, and its developer runs no server that receives your data. This policy
@@ -89,53 +89,67 @@ information.</p>
 <p>Veloci itself sends nothing to its developer. Information leaves your phone only in these cases:</p>
 <ol>
 <li><strong>Maps.</strong> When you view a map, the map images ("tiles") for the area on screen are downloaded
-   from the map provider, OpenFreeMap (map data © OpenStreetMap contributors) or, in builds that
-   use it, Google Maps. Like any website, the provider receives your IP address and which map
-   areas are requested, and can therefore infer the approximate area you are looking at, which
-   during a live map is near where you are. Your recorded route is not sent; it is drawn on your
-   phone. You can turn the map off in Settings → Trips &amp; maps. These providers' own privacy
-   policies apply to their servers: <a href="https://openfreemap.org/">OpenFreeMap</a> and, for Google Maps,
-   <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
+    from the map provider, OpenFreeMap (map data © OpenStreetMap contributors) or, in builds that
+    use it, Google Maps. Like any website, the provider receives your IP address and which map
+    areas are requested, and can therefore infer the approximate area you are looking at, which
+    during a live map is near where you are. Your recorded route is not sent; it is drawn on your
+    phone. You can turn the map off in Settings → Trips &amp; maps. These providers' own privacy
+    policies apply to their servers: <a href="https://openfreemap.org/">OpenFreeMap</a> and, for Google Maps,
+    <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
+<li><strong>Terrain map for trip elevation.</strong> To show a trip's elevation, Veloci reads the ground height
+    at each recorded position from public terrain tiles (the "Terrain Tiles" dataset on Amazon Web
+    Services' Open Data program, <code>s3.amazonaws.com</code>, built from SRTM and other public elevation
+    data). Only the tiles for the area a trip passes through are downloaded, each covering about
+    5 × 5 km, and they are kept on your phone, so each is fetched once. Like any website, Amazon
+    receives your IP address and which tiles are requested, and can therefore infer the approximate
+    area of your trips. Your route, positions and trip data are not sent; the heights are worked
+    out on your phone. Nothing is downloaded for flights or boat trips, or when you turn it off in
+    Settings → Trips &amp; maps → Terrain elevation. <a href="https://aws.amazon.com/privacy/">AWS's privacy notice</a>
+    applies to its servers.</li>
 <li><strong>Road matching (not available in this version).</strong> Veloci contains an optional comparison
-   feature that would send a trip's positions, only when you tap "Compare with road-matched route",
-   to a road-matching service and on to the Google Roads API. It needs a build with Google Maps and
-   a service that you set up yourself, so it is switched off and cannot be used in this version of
-   the app. If it is ever offered, this policy will be updated first, and it would remain optional
-   and used only when you tap Compare.</li>
+    feature that would send a trip's positions, only when you tap "Compare with road-matched route",
+    to a road-matching service and on to the Google Roads API. It needs a build with Google Maps and
+    a service that you set up yourself, so it is switched off and cannot be used in this version of
+    the app. If it is ever offered, this policy will be updated first, and it would remain optional
+    and used only when you tap Compare.</li>
 <li><strong>Internet test.</strong> Only when you tap <strong>Start test</strong> (Signal → Internet), Veloci downloads and
-   uploads test data to Cloudflare's speed test service (<code>speed.cloudflare.com</code>), which picks its
-   nearest data centre. Like any website, Cloudflare receives your IP address and a user agent
-   naming Veloci and its version. Veloci also asks Cloudflare which provider and data centre the
-   connection goes through; its reply includes your IP address and approximate location, of which
-   Veloci keeps only the provider's name and AS number and the data centre's city. No identifier,
-   location, result or other personal data is sent, and no cookies are kept. A test can use a lot of data; on mobile data Veloci asks first and
-   offers a quick test capped at 60 MB. Nothing runs in the background or on a schedule.
-   <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a> applies to its servers.</li>
+    uploads test data to Cloudflare's speed test service (<code>speed.cloudflare.com</code>), which picks its
+    nearest data centre. Like any website, Cloudflare receives your IP address and a user agent
+    naming Veloci and its version. Veloci also asks Cloudflare which provider and data centre the
+    connection goes through; its reply includes your IP address and approximate location, of which
+    Veloci keeps only the provider's name and AS number and the data centre's city. No identifier,
+    location, result or other personal data is sent, and no cookies are kept. A test can use a lot of data; on mobile data Veloci asks first and
+    offers a quick test capped at 60 MB. Nothing runs in the background or on a schedule.
+    <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a> applies to its servers.</li>
 <li><strong>Exports.</strong> If you export a trip (GPX, CSV, JSON), the file goes only where you choose to save
-   or share it. Importing (Veloci exports or GPX files from other apps) reads only the files you
-   pick, on your phone.</li>
+    or share it. Importing (Veloci exports or GPX files from other apps) reads only the files you
+    pick, on your phone.</li>
 <li><strong>Backups.</strong> If you make a backup (Settings → Backup &amp; Restore), the <code>.veloci</code> file contains
-   your trips and activities with their routes, heart rate and steps, your internet test results and your settings
-   (including your vehicle and fuel prices for trip cost). It never contains your parking spot. It is
-   made on your phone and goes only where you choose to save or share it; Veloci never uploads
-   it. Because it contains your location history, keep it somewhere private.</li>
-<li><strong>Bug reports.</strong> If you use Settings → Help &amp; feedback → Report a bug, Veloci opens your own
-   email app with a report addressed to the developer (dev.dawgcodes@gmail.com). Nothing is sent
-   until you press Send there, and you can read and edit the whole email first (also in Veloci's
-   "Preview report"). It contains what you wrote and, unless you turn it off, diagnostic
-   information:
-   - the app, Android and phone model and version;
-   - Veloci's settings and state, such as whether a trip is recording or GPS is locked, and
-     permission states;
-   - battery, connection type and free storage and memory;
-   - recent errors Veloci recorded in this session, and the last crash from the past week.
-     These are recorded on your phone only, with personal details removed.</li>
-</ol>
+    your trips and activities with their routes, heart rate and steps, your internet test results and your settings
+    (including your vehicle and fuel prices for trip cost). It never contains your parking spot. It is
+    made on your phone and goes only where you choose to save or share it; Veloci never uploads
+    it. Because it contains your location history, keep it somewhere private.</li>
+<li>
+<p><strong>Bug reports.</strong> If you use Settings → Help &amp; feedback → Report a bug, Veloci opens your own
+    email app with a report addressed to the developer (dev.dawgcodes@gmail.com). Nothing is sent
+    until you press Send there, and you can read and edit the whole email first (also in Veloci's
+    "Preview report"). It contains what you wrote and, unless you turn it off, diagnostic
+    information:</p>
+<ul>
+<li>the app, Android and phone model and version;</li>
+<li>Veloci's settings and state, such as whether a trip is recording or GPS is locked, and
+  permission states;</li>
+<li>battery, connection type and free storage and memory;</li>
+<li>recent errors Veloci recorded in this session, and the last crash from the past week.
+  These are recorded on your phone only, with personal details removed.</li>
+</ul>
 <p>It never includes your location, coordinates, routes, trip history, GPX data, Wi-Fi network
-   names, IP address, mobile carrier or internet provider, phone number, accounts, contacts,
-   files or advertising and device identifiers. A screenshot is attached only if you pick one,
-   and Veloci attaches a re-encoded copy without its location or other hidden details. Your
-   email provider and the developer's then handle the email like any other.</p>
+names, IP address, mobile carrier or internet provider, phone number, accounts, contacts,
+files or advertising and device identifiers. A screenshot is attached only if you pick one,
+and Veloci attaches a re-encoded copy without its location or other hidden details. Your
+email provider and the developer's then handle the email like any other.</p>
+</li>
+</ol>
 <p>All network traffic uses HTTPS. Veloci does not sell, rent or share your information with anyone
 for advertising, analytics or any other purpose.</p>
 <h2>Backups</h2>
@@ -156,8 +170,8 @@ No method of storage or transmission is perfectly secure.</p>
 <p>Location (to measure speed; only while Veloci is open or a trip/floating speedometer is running,
 with a visible notification; never "all the time"), notifications (trip status), physical activity
 (optional step counting), Health Connect heart rate and steps (optional, read-only), display over
-other apps (optional floating speedometer), and Internet and network state (to download maps,
-and to run the internet test and describe the connection it ran on).</p>
+other apps (optional floating speedometer), and Internet and network state (to download maps
+and terrain tiles, and to run the internet test and describe the connection it ran on).</p>
 <h2>Children</h2>
 <p>Veloci is not directed at children under 13 and does not knowingly collect information from them.</p>
 <h2>Changes</h2>
