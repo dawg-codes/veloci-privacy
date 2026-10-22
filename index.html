@@ -1,28 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Veloci Privacy Policy</title>
+<meta name="description" content="How the Veloci Android app handles your information.">
 <style>
-  body{font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:46rem;margin:0 auto;padding:1.25rem;color:#1b1f23;background:#fff}
-  h1,h2{line-height:1.25} h2{margin-top:2rem;border-bottom:1px solid #e3e6ea;padding-bottom:.25rem}
-  table{border-collapse:collapse;width:100%;display:block;overflow-x:auto}
-  th,td{border:1px solid #d5d9de;padding:.45rem .6rem;text-align:left;vertical-align:top}
-  th{background:#f3f5f7} code{background:#f3f5f7;padding:.1rem .3rem;border-radius:4px}
-  a{color:#0b57d0}
-  @media (prefers-color-scheme:dark){body{background:#14171a;color:#e6e8ea}th{background:#1f2428}th,td{border-color:#333b42}code{background:#1f2428}h2{border-color:#333b42}a{color:#8ab4f8}}
+  :root { color-scheme: light dark; --bg: #ffffff; --fg: #1f2328; --muted: #59636e; --line: #d1d9e0; --head: #f6f8fa; --link: #0b6e57; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0f0f10; --fg: #e8e8e8; --muted: #a8adb3; --line: #333336; --head: #19191b; --link: #2bd9a6; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  main { max-width: 880px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 2rem; line-height: 1.25; margin: 0 0 8px; }
+  h2 { font-size: 1.35rem; margin: 2.2em 0 0.6em; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  p, li { overflow-wrap: anywhere; }
+  em { color: var(--muted); font-style: normal; }
+  a { color: var(--link); }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.9em; background: var(--head); padding: 0.1em 0.35em; border-radius: 4px; }
+  ol > li { margin-bottom: 0.9em; }
+  ul { padding-left: 1.3em; }
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1em 0; border: 1px solid var(--line); border-radius: 8px; }
+  table { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 0.95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  th { background: var(--head); }
+  tr:last-child td { border-bottom: 0; }
 </style>
 </head>
 <body>
+<main>
 <h1>Veloci Privacy Policy</h1>
-<p><em>Effective: 21 October 2026</em> · Applies to the Veloci Android app (<code>app.veloci</code>), version 1.0.0 and later.</p>
+<p><em>Effective: 22 October 2026</em> · Applies to the Veloci Android app (<code>app.veloci</code>), version 1.0.0 and later.</p>
 <p>Veloci is a driving, GPS and connectivity companion (speedometer, trip computer, activity tracker,
 GNSS monitor, sensor tools and internet speed test) made by dawg-codes. It has no account, no ads, no analytics
 and no crash reporting, and its developer runs no server that receives your data. This policy
 explains what the app does with your information.</p>
 <h2>What Veloci uses, and where it stays</h2>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Information</th>
@@ -58,7 +71,7 @@ explains what the app does with your information.</p>
 </tr>
 <tr>
 <td><strong>Internet test results</strong> (speeds, latency, connection type, Wi-Fi band or mobile carrier and signal, your internet provider's name and AS number, the test server's city, labels you add)</td>
-<td>Your internet test history (Signal → Internet)</td>
+<td>Your internet test history (Tools → Internet)</td>
 <td>On your phone only. No IP address or location is stored with them.</td>
 </tr>
 <tr>
@@ -78,8 +91,8 @@ explains what the app does with your information.</p>
 </tr>
 <tr>
 <td><strong>Saved places</strong> (places you save or type in, their names, kind, accuracy and notes)</td>
-<td>Finding your way back to them (Signal → Tools → Saved places)</td>
-<td>On your phone. Included in Veloci backups. "Open in map app" asks first, then passes that place's coordinates (not the note) to the map app you choose.</td>
+<td>Finding your way back to them (Tools → Labs → Saved places)</td>
+<td>On your phone. Included in Veloci backups. "Open in map app" asks first, then passes that place's coordinates and name (not the note) to the map app you choose.</td>
 </tr>
 <tr>
 <td><strong>Motion and orientation sensors</strong> (accelerometer, gyroscope, gravity, compass/magnetometer, barometer)</td>
@@ -97,7 +110,7 @@ explains what the app does with your information.</p>
 <td>On your phone</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Veloci does not use your contacts, photos, files, microphone, camera, advertising ID or account
 information.</p>
 <h2>What leaves your phone</h2>
@@ -109,8 +122,8 @@ information.</p>
     areas are requested, and can therefore infer the approximate area you are looking at, which
     during a live map is near where you are. Your recorded route is not sent; it is drawn on your
     phone. You can turn the map off in Settings → Trips &amp; maps. These providers' own privacy
-    policies apply to their servers: <a href="https://openfreemap.org/">OpenFreeMap</a> and, for Google Maps,
-   <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
+    policies apply to their servers: <a href="https://openfreemap.org/" target="_blank" rel="noopener noreferrer">OpenFreeMap</a> and, for Google Maps,
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.</li>
 <li><strong>Terrain map for trip elevation.</strong> To show a trip's elevation, Veloci reads the ground height
     at each recorded position from public terrain tiles (the "Terrain Tiles" dataset on Amazon Web
     Services' Open Data program, <code>s3.amazonaws.com</code>, built from SRTM and other public elevation
@@ -119,7 +132,7 @@ information.</p>
     receives your IP address and which tiles are requested, and can therefore infer the approximate
     area of your trips. Your route, positions and trip data are not sent; the heights are worked
     out on your phone. Nothing is downloaded for flights or boat trips, or when you turn it off in
-    Settings → Trips &amp; maps → Terrain elevation. <a href="https://aws.amazon.com/privacy/">AWS's privacy notice</a>
+    Settings → Trips &amp; maps → Terrain elevation. <a href="https://aws.amazon.com/privacy/" target="_blank" rel="noopener noreferrer">AWS's privacy notice</a>
     applies to its servers.</li>
 <li><strong>Road matching (not available in this version).</strong> Veloci contains an optional comparison
     feature that would send a trip's positions, only when you tap "Compare with road-matched route",
@@ -127,7 +140,7 @@ information.</p>
     a service that you set up yourself, so it is switched off and cannot be used in this version of
     the app. If it is ever offered, this policy will be updated first, and it would remain optional
     and used only when you tap Compare.</li>
-<li><strong>Internet test.</strong> Only when you tap <strong>Start test</strong> (Signal → Internet), Veloci downloads and
+<li><strong>Internet test.</strong> Only when you tap <strong>Start test</strong> (Tools → Internet), Veloci downloads and
     uploads test data to Cloudflare's speed test service (<code>speed.cloudflare.com</code>), which picks its
     nearest data centre. Like any website, Cloudflare receives your IP address and a user agent
     naming Veloci and its version. Veloci also asks Cloudflare which provider and data centre the
@@ -135,7 +148,7 @@ information.</p>
     Veloci keeps only the provider's name and AS number and the data centre's city. No identifier,
     location, result or other personal data is sent, and no cookies are kept. A test can use a lot of data; on mobile data Veloci asks first and
     offers a quick test capped at 60 MB. Nothing runs in the background or on a schedule.
-   <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a> applies to its servers.</li>
+    <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare's privacy policy</a> applies to its servers.</li>
 <li><strong>Exports.</strong> If you export a trip (GPX, CSV, JSON), your saved places (GPX) or a Motion Lab
     session (CSV), the file goes only where you choose to save or share it. Importing (Veloci exports or GPX files from other apps) reads only the files you
     pick, on your phone.</li>
@@ -147,17 +160,17 @@ information.</p>
     it. Because it contains your location history, keep it somewhere private.</li>
 <li>
 <p><strong>Bug reports.</strong> If you use Settings → Help &amp; feedback → Report a bug, Veloci opens your own
-    email app with a report addressed to the developer (dev.dawgcodes@gmail.com). Nothing is sent
+    email app with a report addressed to the developer (<a href="mailto:dev.dawgcodes@gmail.com">dev.dawgcodes@gmail.com</a>). Nothing is sent
     until you press Send there, and you can read and edit the whole email first (also in Veloci's
-   "Preview report"). It contains what you wrote and, unless you turn it off, diagnostic
+    "Preview report"). It contains what you wrote and, unless you turn it off, diagnostic
     information:</p>
 <ul>
 <li>the app, Android and phone model and version;</li>
 <li>Veloci's settings and state, such as whether a trip is recording or GPS is locked, and
- permission states;</li>
+  permission states;</li>
 <li>battery, connection type and free storage and memory;</li>
 <li>recent errors Veloci recorded in this session, and the last crash from the past week.
- These are recorded on your phone only, with personal details removed.</li>
+  These are recorded on your phone only, with personal details removed.</li>
 </ul>
 <p>It never includes your location, coordinates, routes, trip history, GPX data, Wi-Fi network
 names, IP address, mobile carrier or internet provider, phone number, accounts, contacts,
@@ -165,13 +178,17 @@ files or advertising and device identifiers. A screenshot is attached only if yo
 and Veloci attaches a re-encoded copy without its location or other hidden details. Your
 email provider and the developer's then handle the email like any other.</p>
 </li>
-<li><strong>Optional tips (Google Play version).</strong> If you choose to leave a tip in Settings → About,
-Google Play handles the whole payment under <a href="https://policies.google.com/privacy">Google's privacy policy</a>
-and the <a href="https://play.google.com/about/play-terms/">Google Play terms</a>. Veloci never sees your
-payment details. It receives only Google Play's confirmation that the tip went through, uses it
-to say thank you, and keeps nothing about it. While the About screen is open, Veloci asks Google
-Play for the tip prices; nothing is sent at any other time. Tips unlock nothing. The developer
-receives the payout from Google, as with any Play purchase.</li>
+<li>
+<p><strong>Optional tips (Google Play version).</strong> If you choose to leave a tip in Settings → About,
+    Google Play handles the whole payment under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's privacy policy</a>
+    and the <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer">Google Play terms</a>. Veloci never sees your
+    payment details. It receives only Google Play's confirmation that the tip went through, uses it
+    to say thank you, and keeps nothing about it. While the About screen is open, Veloci asks Google
+    Play for the tip prices. If a tip is left unfinished (for example a payment still pending), the
+    next time you open Veloci it asks Google Play once to complete it, so the tip isn't refunded;
+    nothing is sent at any other time. Tips unlock nothing. The developer
+    receives the payout from Google, as with any Play purchase.</p>
+</li>
 </ol>
 <p>All network traffic uses HTTPS. Veloci does not sell, rent or share your information with anyone
 for advertising, analytics or any other purpose.</p>
@@ -201,6 +218,7 @@ compass and pressure sensors need no permission.</p>
 <h2>Changes</h2>
 <p>If this policy changes, the new version will be published at this address with a new effective date.</p>
 <h2>Contact</h2>
-<p>Questions about this policy or your data: <strong>dev.dawgcodes@gmail.com</strong></p>
+<p>Questions about this policy or your data: <strong><a href="mailto:dev.dawgcodes@gmail.com">dev.dawgcodes@gmail.com</a></strong></p>
+</main>
 </body>
 </html>
